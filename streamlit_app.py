@@ -332,8 +332,6 @@ else:
     Yaxistitle = selectY
     
 fig.update_layout(
-    width = 2000,
-    height = 1200,
     title= selectY + " Pace per " + mode,
     xaxis_title = "Lap",
     yaxis_title = Yaxistitle + " time [s]"
