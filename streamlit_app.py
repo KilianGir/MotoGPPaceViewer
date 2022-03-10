@@ -205,15 +205,15 @@ teamlist = pd.unique(df["TeamName"])
 bikelist = pd.unique(df["Bike"])
 
 
-mode = st.selectbox('Pick a mode', modes)
+mode = st.sidebar.selectbox('Pick a mode', modes)
 #mode = "Rider"
 
 if mode == "Bike":
     #Bike average mode
     
-    selectY = st.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a section" , plots)
     #selectY = "Lap Time"
-    bikechosen = st.multiselect('Select one (or more) bikes', bikelist)
+    bikechosen = st.sidebar.multiselect('Select one (or more) bikes', bikelist)
     #bikechosen = ["Aprilia", "KTM"]
 
 
@@ -252,9 +252,9 @@ if mode == "Bike":
 elif mode == "Team":
     #Team average mode
 
-    selectY = st.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a section" , plots)
     #selectY = "Lap Time"
-    teamchosen = st.multiselect('Select one (or more) teams', teamlist)
+    teamchosen = st.sidebar.multiselect('Select one (or more) teams', teamlist)
     #teamchosen = ["Aprilia Racing", "Tech3 KTM Factory Racing"]
 
 
@@ -293,9 +293,9 @@ elif mode == "Team":
 else:
     #Rider mode
     
-    selectY = st.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a section" , plots)
     #selectY = "Lap Time"
-    riderchosen = st.multiselect('Select one (or more) riders', riderlist)
+    riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
     #riderchosen = ["Marc MARQUEZ", "Francesco BAGNAIA", "Pol ESPARGARO"]
 
 
