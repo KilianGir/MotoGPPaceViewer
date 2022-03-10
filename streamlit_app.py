@@ -332,11 +332,12 @@ else:
     Yaxistitle = selectY
     
 fig.update_layout(
+    width = 800,
     height = 1000,
     title= selectY + " Pace per " + mode,
     xaxis_title = "Lap",
     yaxis_title = Yaxistitle + " time [s]"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=False)
 #fig.show()
