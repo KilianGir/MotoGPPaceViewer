@@ -3,7 +3,6 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib.pyplot import figure
-import seaborn as sns
 import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
