@@ -13,7 +13,7 @@ df = pd.read_csv("./Data/MotoGP_Round01_RaceResults.csv")
 #df.head()
 
 # Start in wide mode
-st.set_page_config(page_title="MotoGP Race Pace Viewer, page_icon="🏍️", layout="wide")
+st.set_page_config(page_title="MotoGP Race Pace Viewer, page_icon="🦈", layout="wide")
 
 # Color/Team/Hierarchy definition
 
