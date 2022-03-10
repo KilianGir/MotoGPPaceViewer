@@ -339,5 +339,5 @@ fig.update_layout(
     yaxis_title = Yaxistitle + " time [s]"
 )
 
-st.plotly_chart(fig, use_container_width=False)
+st.plotly_chart(fig, use_container_width=True)
 #fig.show()
