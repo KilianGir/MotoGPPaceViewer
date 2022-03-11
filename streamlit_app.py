@@ -215,8 +215,13 @@ if mode == "Bike":
     
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    bikechosen = st.sidebar.multiselect('Select one (or more) bikes', bikelist)
+    if !selall:
+        bikechosen = st.sidebar.multiselect('Select one (or more) bikes', bikelist)
+    else:
+        bikechosen = bikelist
+    selall = st.sidebar.checkbox('Select all')
     #bikechosen = ["Aprilia", "KTM"]
+
 
 
     fig = go.Figure()
@@ -274,9 +279,12 @@ elif mode == "Team":
 
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    teamchosen = st.sidebar.multiselect('Select one (or more) teams', teamlist)
+    if !selall:
+        teamchosen = st.sidebar.multiselect('Select one (or more) teams', teamlist)
+    else:
+        teamchosen = teamlist
+    selall = st.sidebar.checkbox('Select all')
     #teamchosen = ["Aprilia Racing", "Tech3 KTM Factory Racing"]
-
 
     fig = go.Figure()
 
@@ -333,7 +341,11 @@ else:
     
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
+    if !selall:
+        riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
+    else:
+        riderchosen = riderlist
+    selall = st.sidebar.checkbox('Select all')
     #riderchosen = ["Marc MARQUEZ", "Francesco BAGNAIA", "Pol ESPARGARO"]
 
 
