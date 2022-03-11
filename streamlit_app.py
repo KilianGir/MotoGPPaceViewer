@@ -215,7 +215,7 @@ if mode == "Bike":
     
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    if !selall:
+    if not selall:
         bikechosen = st.sidebar.multiselect('Select one (or more) bikes', bikelist)
     else:
         bikechosen = bikelist
@@ -279,7 +279,7 @@ elif mode == "Team":
 
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    if !selall:
+    if not selall:
         teamchosen = st.sidebar.multiselect('Select one (or more) teams', teamlist)
     else:
         teamchosen = teamlist
@@ -341,7 +341,7 @@ else:
     
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
-    if !selall:
+    if not selall:
         riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
     else:
         riderchosen = riderlist
