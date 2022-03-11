@@ -29,7 +29,7 @@ def RiderColor2022(RiderName):
     elif RiderName == "Fabio QUARTARARO" or RiderName == "Franco MORBIDELLI":
         return("#183DC7")
     elif RiderName == "Luca MARINI" or RiderName == "Marco BEZZECHI":
-        return("#CBEC00")
+        return("#DBFF03")
     elif RiderName == "Johann ZARCO" or RiderName == "Jorge MARTIN":
         return("#CC3333")
     elif RiderName == "Brad BINDER" or RiderName == "Miguel OLIVEIRA":
@@ -55,7 +55,7 @@ def TeamColor2022(TeamName):
     elif TeamName == "Monster Energy Yamaha MotoGP™" :
         return("#183DC7")
     elif TeamName == "Mooney VR46 Racing Team":
-        return("#CBEC00")
+        return("#DBFF03")
     elif TeamName == "Pramac Racing":
         return("#CC3333")
     elif TeamName == "Red Bull KTM Factory Racing":
