@@ -213,7 +213,7 @@ mode = st.sidebar.selectbox('Pick a mode', modes)
 if mode == "Bike":
     #Bike average mode
     
-    selectY = st.sidebar.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
     bikechosen = st.sidebar.multiselect('Select one (or more) bikes', bikelist)
     #bikechosen = ["Aprilia", "KTM"]
@@ -255,7 +255,7 @@ if mode == "Bike":
         figtitle = "Position evolution"
     else:
         figtitle = "Race pace in sector " + selectY  
-
+    
     fig.update_layout(
         width = 1000,
         height = 800,
@@ -263,11 +263,16 @@ if mode == "Bike":
         xaxis_title = "Lap",
         yaxis_title = Yaxistitle
     )
+    
+    if selectY == "Position":
+            fig.update_layout(
+                yaxis = dict(autorange="reversed")
+            )
 
 elif mode == "Team":
     #Team average mode
 
-    selectY = st.sidebar.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
     teamchosen = st.sidebar.multiselect('Select one (or more) teams', teamlist)
     #teamchosen = ["Aprilia Racing", "Tech3 KTM Factory Racing"]
@@ -318,10 +323,15 @@ elif mode == "Team":
         yaxis_title = Yaxistitle
     )
     
+    if selectY == "Position":
+            fig.update_layout(
+                yaxis = dict(autorange="reversed")
+            )    
+    
 else:
     #Rider mode
     
-    selectY = st.sidebar.selectbox("Pick a section" , plots)
+    selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
     riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
     #riderchosen = ["Marc MARQUEZ", "Francesco BAGNAIA", "Pol ESPARGARO"]
@@ -379,6 +389,11 @@ else:
         xaxis_title = "Lap",
         yaxis_title = Yaxistitle
     )
+    
+    if selectY == "Position":
+            fig.update_layout(
+                yaxis = dict(autorange="reversed")
+            )    
     
 st.plotly_chart(fig, use_container_width=True)
 #fig.show()
