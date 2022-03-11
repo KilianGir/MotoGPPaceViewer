@@ -342,7 +342,7 @@ else:
     selectY = st.sidebar.selectbox("Pick a channel to visualize" , plots)
     #selectY = "Lap Time"
     selall = st.sidebar.checkbox('Select all')
-    if not selall:
+    if selall:
         riderchosen = riderlist
     else:
         riderchosen = st.sidebar.multiselect('Select one (or more) riders', riderlist)
