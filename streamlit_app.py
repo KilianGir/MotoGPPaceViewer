@@ -201,7 +201,7 @@ bikegrouped_df = df.groupby(["Bike", "Lap"], as_index=False).mean()
 
 #Mode selection: Riders, Teams, Bike
 modes = ["Rider", "Team", "Bike"]
-plots = ["Lap Time", "T1", "T2", "T3", "T4"]
+plots = ["Lap Time", "T1", "T2", "T3", "T4", "Speed", "Position"]
 riderlist = pd.unique(df["Rider"])
 teamlist = pd.unique(df["TeamName"])
 bikelist = pd.unique(df["Bike"])
@@ -239,16 +239,29 @@ if mode == "Bike":
                             name=bike))
 
     if selectY == "Lap Time" :
-        Yaxistitle = "Lap"
+        Yaxistitle = "Lap time [s]"
+    elif selectY == "Speed":
+        Yaxistitle =  "Top speed [km/h]"
+    elif selectY == "Position:
+        Yaxistitle = "Position at the end of the lap"
     else:
-        Yaxistitle = selectY
-    
+        Yaxistitle = selectY + " time [s]"
+        
+    if selectY == "Lap Time" :
+        figtitle = "Race pace - Lap Times"
+    elif selectY == "Speed":
+        figtitle =  "Top speed along the race"
+    elif selectY == "Position:
+        figtitle = "Position evolution"
+    else:
+        figtitle = "Race pace in sector " + selectY  
+
     fig.update_layout(
         width = 1000,
         height = 800,
-        title= selectY + " Pace",
+        title = figtitle,
         xaxis_title = "Lap",
-        yaxis_title = Yaxistitle + " time [s]"
+        yaxis_title = Yaxistitle
     )
 
 elif mode == "Team":
@@ -280,16 +293,29 @@ elif mode == "Team":
                             name=team))
 
     if selectY == "Lap Time" :
-        Yaxistitle = "Lap"
+        Yaxistitle = "Lap time [s]"
+    elif selectY == "Speed":
+        Yaxistitle =  "Top speed [km/h]"
+    elif selectY == "Position:
+        Yaxistitle = "Position at the end of the lap"
     else:
-        Yaxistitle = selectY
-    
+        Yaxistitle = selectY + " time [s]"
+        
+    if selectY == "Lap Time" :
+        figtitle = "Race pace - Lap Times"
+    elif selectY == "Speed":
+        figtitle =  "Top speed along the race"
+    elif selectY == "Position:
+        figtitle = "Position evolution"
+    else:
+        figtitle = "Race pace in sector " + selectY  
+
     fig.update_layout(
         width = 1000,
         height = 800,
-        title= selectY + " Pace",
+        title = figtitle,
         xaxis_title = "Lap",
-        yaxis_title = Yaxistitle + " time [s]"
+        yaxis_title = Yaxistitle
     )
     
 else:
@@ -328,17 +354,31 @@ else:
                             line=dict(color="#8c8c8c", width=0.5),         
                             name=rider))
 
-if selectY == "Lap Time" :
-    Yaxistitle = "Lap"
-else:
-    Yaxistitle = selectY
-    
-fig.update_layout(
-    height = 800,
-    title= selectY + " Pace per " + mode,
-    xaxis_title = "Lap",
-    yaxis_title = Yaxistitle + " time [s]"
-)
+    if selectY == "Lap Time" :
+        Yaxistitle = "Lap time [s]"
+    elif selectY == "Speed":
+        Yaxistitle =  "Top speed [km/h]"
+    elif selectY == "Position:
+        Yaxistitle = "Position at the end of the lap"
+    else:
+        Yaxistitle = selectY + " time [s]"
+        
+    if selectY == "Lap Time" :
+        figtitle = "Race pace - Lap Times"
+    elif selectY == "Speed":
+        figtitle =  "Top speed along the race"
+    elif selectY == "Position:
+        figtitle = "Position evolution"
+    else:
+        figtitle = "Race pace in sector " + selectY  
 
+    fig.update_layout(
+        width = 1000,
+        height = 800,
+        title = figtitle,
+        xaxis_title = "Lap",
+        yaxis_title = Yaxistitle
+    )
+    
 st.plotly_chart(fig, use_container_width=True)
 #fig.show()
