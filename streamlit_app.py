@@ -242,7 +242,7 @@ if mode == "Bike":
         Yaxistitle = "Lap time [s]"
     elif selectY == "Speed":
         Yaxistitle =  "Top speed [km/h]"
-    elif selectY == "Position:
+    elif selectY == "Position":
         Yaxistitle = "Position at the end of the lap"
     else:
         Yaxistitle = selectY + " time [s]"
@@ -251,7 +251,7 @@ if mode == "Bike":
         figtitle = "Race pace - Lap Times"
     elif selectY == "Speed":
         figtitle =  "Top speed along the race"
-    elif selectY == "Position:
+    elif selectY == "Position":
         figtitle = "Position evolution"
     else:
         figtitle = "Race pace in sector " + selectY  
@@ -296,7 +296,7 @@ elif mode == "Team":
         Yaxistitle = "Lap time [s]"
     elif selectY == "Speed":
         Yaxistitle =  "Top speed [km/h]"
-    elif selectY == "Position:
+    elif selectY == "Position":
         Yaxistitle = "Position at the end of the lap"
     else:
         Yaxistitle = selectY + " time [s]"
@@ -305,7 +305,7 @@ elif mode == "Team":
         figtitle = "Race pace - Lap Times"
     elif selectY == "Speed":
         figtitle =  "Top speed along the race"
-    elif selectY == "Position:
+    elif selectY == "Position":
         figtitle = "Position evolution"
     else:
         figtitle = "Race pace in sector " + selectY  
@@ -358,7 +358,7 @@ else:
         Yaxistitle = "Lap time [s]"
     elif selectY == "Speed":
         Yaxistitle =  "Top speed [km/h]"
-    elif selectY == "Position:
+    elif selectY == "Position":
         Yaxistitle = "Position at the end of the lap"
     else:
         Yaxistitle = selectY + " time [s]"
@@ -367,7 +367,7 @@ else:
         figtitle = "Race pace - Lap Times"
     elif selectY == "Speed":
         figtitle =  "Top speed along the race"
-    elif selectY == "Position:
+    elif selectY == "Position":
         figtitle = "Position evolution"
     else:
         figtitle = "Race pace in sector " + selectY  
