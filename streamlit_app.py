@@ -7,10 +7,6 @@ import numpy as np
 import plotly.graph_objects as go
 import streamlit as st
 
-#Data read
-
-df = pd.read_csv("./Data/MotoGP_Round01_RaceResults.csv")
-#df.head()
 
 # Start in wide mode
 st.set_page_config(page_title="MotoGP Race Pace Viewer", page_icon="🏍️", layout="wide")
@@ -184,7 +180,13 @@ def Hierarch2022(RiderName):
         return(1)
     elif RiderName == "Darryn BINDER":
         return(2)
-      
+
+#Data read
+round = st.sidebar.selectbox("Chose a round" , ["Round01", "Round02"])
+url = "./Data/MotoGP_"+round+"_RaceResults.csv")
+df = pd.read_csv(url)
+#df.head()    
+    
       
 # Dataframe tweaks
 
