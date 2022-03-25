@@ -183,7 +183,7 @@ def Hierarch2022(RiderName):
 
 #Data read
 round = st.sidebar.selectbox("Chose a round" , ["Round01", "Round02"])
-url = "./Data/MotoGP_"+round+"_RaceResults.csv")
+url = "./Data/MotoGP_"+round+"_RaceResults.csv"
 df = pd.read_csv(url)
 #df.head()    
     
